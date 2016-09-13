@@ -23,8 +23,8 @@ $ barn \
     --token=a-personal-github-access-token \
 ```
 
-This watches the file `./examples/explorer/pod.yaml` of the `github.com/kubernetes` repostiory on the `master` branch.
-If there's any changes pushed to that file on the master branch, `barn` will apply them.
+This watches the three example manifest files of the `github.com/kubernetes` repostiory on the `master` branch.
+If there's any changes pushed to those files on the master branch, `barn` will apply them.
 
 Note, that any HTTP server that serves `yaml` files and uses the `Authorization: Bearer <token>` method to
 authenticate clients will work. So instead of an HTTP server pointing to your Github repository content, as seen above,
