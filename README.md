@@ -15,10 +15,12 @@ cluster  to run the respective manifests. Currently, any OAuth2 protected HTTP e
 
 ```
 $ barn \
-    --cluster=https://kubernetes.default.svc.cluster.local \
-    --source=https://raw.githubusercontent.com/kubernetes/kubernetes/master/examples/explorer/pod.yaml \
+    --cluster=http://127.0.0.1:8001 \
+    --source=https://raw.githubusercontent.com/kubernetes/kubernetes/master/examples/elasticsearch/es-svc.yaml \
+    --source=https://raw.githubusercontent.com/kubernetes/kubernetes/master/examples/elasticsearch/es-rc.yaml \
+    --source=https://raw.githubusercontent.com/kubernetes/kubernetes/master/examples/elasticsearch/service-account.yaml \
     [--source=another-source ... \]
-    [--token=authentication-not-needed-in-this-case \]
+    --token=a-personal-github-access-token \
 ```
 
 This watches the file `./examples/explorer/pod.yaml` of the `github.com/kubernetes` repostiory on the `master` branch.
