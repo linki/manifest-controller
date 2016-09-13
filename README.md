@@ -26,7 +26,7 @@ $ barn \
 This watches the file `./examples/explorer/pod.yaml` of the `github.com/kubernetes` repostiory on the `master` branch.
 If there's any changes pushed to that file on the master branch, `barn` will apply them.
 
-Note, that any HTTP server that serves `yaml` or `json` files and uses the `Authorization: Bearer <token>` method to
+Note, that any HTTP server that serves `yaml` files and uses the `Authorization: Bearer <token>` method to
 authenticate clients will work. So instead of an HTTP server pointing to your Github repository content, as seen above,
 you could easily run your own more tailored solution, e.g. https://manifests.me/?cluster=foo&env=bar could return
 dynamicly generated `yaml` specifically for that cluster.
