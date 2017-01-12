@@ -1,4 +1,4 @@
-BINARY        ?= barn
+BINARY        ?= manifest-controller
 VERSION       ?= $(shell git describe --tags --always --dirty)
 IMAGE         ?= pierone.stups.zalan.do/teapot/$(BINARY)
 TAG           ?= $(VERSION)

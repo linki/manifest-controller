@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/linki/barn/cluster"
-	"github.com/linki/barn/manifest"
+	"github.com/linki/manifest-controller/cluster"
+	"github.com/linki/manifest-controller/manifest"
 
 	log "github.com/Sirupsen/logrus"
 )

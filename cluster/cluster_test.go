@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/linki/barn/manifest"
+	"github.com/linki/manifest-controller/manifest"
 )
 
 func TestApplyCommand(t *testing.T) {

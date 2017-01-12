@@ -8,6 +8,6 @@ RUN chmod +x /kubectl
 ADD scm-source.json /
 
 # add binary
-ADD build/linux/barn /
+ADD build/linux/manifest-controller /
 
-ENTRYPOINT ["/barn"]
+ENTRYPOINT ["/manifest-controller"]

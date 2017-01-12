@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/linki/barn/cluster"
-	"github.com/linki/barn/controller"
-	"github.com/linki/barn/manifest"
+	"github.com/linki/manifest-controller/cluster"
+	"github.com/linki/manifest-controller/controller"
+	"github.com/linki/manifest-controller/manifest"
 
 	log "github.com/Sirupsen/logrus"
 

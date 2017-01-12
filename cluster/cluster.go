@@ -4,7 +4,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/linki/barn/manifest"
+	"github.com/linki/manifest-controller/manifest"
 
 	log "github.com/Sirupsen/logrus"
 )
