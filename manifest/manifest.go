@@ -9,11 +9,6 @@ import (
 	log "github.com/Sirupsen/logrus"
 )
 
-type Source interface {
-	Fetch() (changed bool, err error)
-	Manifest() string
-}
-
 type Manifest struct {
 	Content string
 

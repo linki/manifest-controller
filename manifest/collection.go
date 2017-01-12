@@ -9,14 +9,14 @@ import (
 )
 
 type ManifestCollection struct {
-	manifests  []*Manifest
+	manifests  []Source
 	Content    string
 	lastUpdate time.Time
 
 	sync.Mutex
 }
 
-func NewCollection(manifests ...*Manifest) *ManifestCollection {
+func NewCollection(manifests ...Source) *ManifestCollection {
 	return &ManifestCollection{
 		manifests: manifests,
 	}
@@ -31,7 +31,7 @@ func (mc *ManifestCollection) Fetch() (bool, error) {
 			return false, err
 		}
 
-		contents = append(contents, m.Content)
+		contents = append(contents, m.Manifest())
 	}
 
 	manifest := strings.Join(contents, "\n\n---\n\n")

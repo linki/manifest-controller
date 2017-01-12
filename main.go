@@ -50,7 +50,7 @@ func main() {
 		oauth2.StaticTokenSource(&oauth2.Token{AccessToken: params.token}),
 	)
 
-	manifests := make([]*manifest.Manifest, 0)
+	manifests := make([]manifest.Source, 0)
 
 	for _, s := range params.sources {
 		manifests = append(manifests, manifest.New(s, client))
