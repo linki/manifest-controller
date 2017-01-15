@@ -18,6 +18,7 @@ import (
 const (
 	defaultCluster  = "http://127.0.0.1:8001"
 	defaultInterval = 1 * time.Minute
+	tokenEnvVar     = "TOKEN"
 )
 
 var params struct {
@@ -33,7 +34,7 @@ var version = "Unknown"
 func init() {
 	kingpin.Flag("source", "List of sources to watch (can be any OAuth2 protected HTTP resource)").StringsVar(&params.sources)
 	kingpin.Flag("cluster", "The cluster to connect to (there's no means of authentication, use `kubectl proxy`)").Default(defaultCluster).StringVar(&params.cluster)
-	kingpin.Flag("token", "An optional Bearer token sent with the request").StringVar(&params.token)
+	kingpin.Flag("token", "An optional Bearer token sent with the request").Envar(tokenEnvVar).StringVar(&params.token)
 	kingpin.Flag("interval", "Interval in Duration format, e.g. 60s.").Short('i').Default(defaultInterval.String()).DurationVar(&params.interval)
 	kingpin.Flag("debug", "Enable debug logging").BoolVar(&params.debug)
 }
