@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"net/http"
 	"time"
 
 	"github.com/linki/manifest-controller/cluster"
@@ -47,9 +48,13 @@ func main() {
 		log.SetLevel(log.DebugLevel)
 	}
 
-	client := oauth2.NewClient(context.TODO(),
-		oauth2.StaticTokenSource(&oauth2.Token{AccessToken: params.token}),
-	)
+	client := http.DefaultClient
+
+	if params.token != "" {
+		client = oauth2.NewClient(context.TODO(),
+			oauth2.StaticTokenSource(&oauth2.Token{AccessToken: params.token}),
+		)
+	}
 
 	manifests := make([]manifest.Source, 0)
 
