@@ -34,5 +34,5 @@ dynamicly generated `yaml` specifically for that cluster.
 # Caveats
 
 The controller will only `kubectl apply` the files it watches, so it cannot handle deletions currently.
-Furthermore, controllers that don't handle `apply` correctly will also not work as expected, e.g. daemon sets aren't
+Furthermore, API objects that don't handle `apply` correctly will also not work as expected, e.g. daemon sets aren't
 updated by `apply` at the moment.
