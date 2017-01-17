@@ -1,4 +1,5 @@
 # manifest-controller
+[![Build Status](https://travis-ci.org/linki/manifest-controller.svg?branch=master)](https://travis-ci.org/linki/manifest-controller)
 
 manifest-controller watches remote Kubernetes manifests and applies them to your cluster.
 
