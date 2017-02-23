@@ -1,5 +1,7 @@
 # manifest-controller
 [![Build Status](https://travis-ci.org/linki/manifest-controller.svg?branch=master)](https://travis-ci.org/linki/manifest-controller)
+[![Coverage Status](https://coveralls.io/repos/github/linki/manifest-controller/badge.svg?branch=master)](https://coveralls.io/github/linki/manifest-controller?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/linki/manifest-controller)](https://goreportcard.com/report/github.com/linki/manifest-controller)
 
 manifest-controller watches remote Kubernetes manifests and applies them to your cluster.
 
