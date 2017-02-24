@@ -10,7 +10,7 @@ go:
 - 1.8
 - tip
 
-before_install:
+install:
 - go get github.com/mattn/goveralls
 
 script:
