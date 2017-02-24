@@ -1,0 +1,15 @@
+workspace:
+  base: /go
+  path: src/github.com/linki/manifest-controller
+
+pipeline:
+  build:
+    image: golang:${GO_VERSION}
+    commands:
+    - go test ./cluster ./manifest
+
+matrix:
+  GO_VERSION:
+  - latest
+  - 1.8
+  - 1.7
